@@ -143,8 +143,8 @@ async function connect() {
   setStatus('connecting', 'Connecting...');
   log('Connecting to proxy server...', 'info');
   
-  // Get WebSocket URL (same host as page)
-  const wsUrl = `ws://${window.location.host}`;
+  // Connect to the deployed proxy
+  const wsUrl = 'wss://speqai-proxy.bradmills55.workers.dev';
   
   ws = new WebSocket(wsUrl);
   
